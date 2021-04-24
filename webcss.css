@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(#2b1055,#7597de);
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .fai{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left:20px ;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+header ul li a:hover{
+    background: white;
+    color: #2b1055;
+}
+section#abstractt,
+section#home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+#name{
+    position: absolute;
+    top: 25%;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    transform: translateY(100px);
+}
+#bttn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: white;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(130px);
+}
+.abstract{
+    position:absolute;
+    padding: 13.8%;
+    background: #1c0522;
+}
+.abstract h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.abstract p{
+    font-size: 1em;
+    color: white;
+}
+
+
+
+#product_section h2 {
+    display: flex;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 0em;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+#products {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 5em 3em 13em 3em;
+    gap: 2em;
+}
+
+.product {
+    width: 22%;
+    padding-top: 0;
+    border: 1px solid #ecfef8;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ecfef8;
+    box-shadow: 0 0.2em 0.5em #061d1a71;
+}
+
+.product img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.plants {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 1em 0;
+}
+.product h3 {
+    margin: 1.1em 0 0.8em 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+.product p {
+    margin: 0.5em 1em;
+}
+.btn {
+    width: 100%;
+    height: 2.5em;
+    background-color: #00919bd0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1em;
+    border-color: #00919b91;
+    color: #ffffff;
+}
+@media all and (max-width: 62em) { 
+    #products {
+        flex-wrap: wrap;
+        padding: 3em 1em 8em 1em;
+    }
+    .product {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 32em) {
+    .product {
+        width: 70%;
+    }
+}
+
+
+.process{
+    position:absolute;
+    padding: 13.8%;
+    background: #1c0522;
+}
+.process h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.process p{
+    font-size: 1em;
+    color: white;
+}
+
+/*.member{
+    position: absolute;
+    padding: 13.8%;
+    background: linear-gradient(to top,#1c0522,transparent);
+}
+.member h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.member p{
+    font-size: 1.5em;
+    color: white;
+}
+.VDO{
+    position: absolute;
+    padding: 13.8%;
+    background: linear-gradient(to top,#1c0522,transparent);
+}
+.VDO h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.VDO p{
+    font-size: 1.5em;
+    color: white;
+}
+.poster{
+    position: absolute;
+    padding: 13.8%;
+    background: linear-gradient(to top,#1c0522,transparent);
+}
+.poster h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.poster p{
+    font-size: 1.5em;
+    color: white;
+}
