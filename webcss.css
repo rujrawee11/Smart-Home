@@ -410,21 +410,8 @@ section img#moon{
     z-index: 10;
 }
 
-.member{
-    position: absolute;
-}
-.member h2{
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: white;
-}
-.member p{
-    font-size: 1em;
-    color: white;
-}
-
 .VDO{
-    position: absolute;
+    position: relative;
 }
 .VDO h2{
     font-size: 2.5em;
@@ -435,18 +422,25 @@ section img#moon{
     font-size: 1em;
     color: white;
 }
-#vdi{
+#vedi{
     border-radius: 35px;
     color: rgb(255, 255, 255);
     background: #0b2f4b;
     opacity: 60%;
     position: absolute;
-    bottom:90%;
-    right: 50%;
+    bottom: 96%;
+    margin-top: 0%;
+    right: 90%;
     padding: 20px;
     width: 200px;
     height:90px;
     text-align: center;
+    z-index: 9;
+}
+#vdo2{
+    position: relative;
+    margin-top: 2%;
+    z-index: 9;
 }
 .poster{
     position: absolute;
@@ -460,3 +454,133 @@ section img#moon{
     font-size: 1em;
     color: white;
 }
+#phead{
+    border-radius: 35px;
+    color: rgb(255, 255, 255);
+    background: #0b2f4b;
+    opacity: 60%;
+    position: absolute;
+    bottom: 280px;
+    margin-top: 0%;
+    left: 5px;
+    padding: 20px;
+    width: 200px;
+    height:90px;
+    text-align: center;
+}
+.picposter{
+    position: absolute;
+    transform: translateX(350px) translateY(-220px);
+    margin-top: -100px;
+    width: 30vw;
+    height: 90vh;
+}
+
+.member{
+    position: relative;
+}
+.member h2{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+.member p{
+    font-size: 1em;
+    color: white;
+}
+#mem{
+    border-radius: 35px;
+    color: rgb(255, 255, 255);
+    background: #0b2f4b;
+    opacity: 60%;
+    position: absolute;
+    bottom: 96%;
+    margin-top: 0%;
+    right: 90%;
+    padding: 20px;
+    width: 200px;
+    height:90px;
+    text-align: center;
+    z-index: 9;
+}
+.namewrap{
+    width:300px;
+    margin:2em auto;
+  }
+  .namecard1{
+    width:100%;
+    background:red;
+    padding-top:100%;
+    position:relative;
+    border-radius:30px;
+    box-shadow:0px 5px 15px #0003;
+    border:15px solid #f6ed5d;
+    background-image:url(https://i.imgur.com/y4V6MOI.jpeg);
+    background-size:cover;
+    background-position:center;
+    right: 170%;
+  }
+  .namecard2{
+    width:100%;
+    background:red;
+    padding-top:100%;
+    position:relative;
+    border-radius:30px;
+    box-shadow:0px 5px 15px #0003;
+    border:15px solid #f6ed5d;
+    background-image:url(https://i.imgur.com/f0PPnX9.jpg);
+    background-size:cover;
+    background-position:center;
+    right: 55%;
+    top: -361px;
+  }
+  .namecard3{
+    width:100%;
+    background:red;
+    padding-top:100%;
+    position:relative;
+    border-radius:30px;
+    box-shadow:0px 5px 15px #0003;
+    border:15px solid #f6ed5d;
+    background-image:url(https://i.imgur.com/f0PPnX9.jpg);
+    background-size:cover;
+    background-position:center;
+    right: -58%;
+    top: -724px;
+  }
+  .namecard4{
+    width:100%;
+    background:red;
+    padding-top:100%;
+    position:relative;
+    border-radius:30px;
+    box-shadow:0px 5px 15px #0003;
+    border:15px solid #f6ed5d;
+    background-image:url(https://i.imgur.com/y4V6MOI.jpeg);
+    background-size:cover;
+    background-position:center;
+    left: 170%;
+    top: -1085px;
+  }
+  .label{
+    background:#0005;
+    position:absolute;
+    bottom:1em;
+    right:1em;
+    width:calc(100% - 2em);
+    padding:1em;
+    box-sizing:border-box;
+    text-align:center;
+    border-radius:10px;
+    background:linear-gradient(to right,#fe5487,#a33bf7)
+  }
+  .name{
+    font-size:1.3em;
+  }
+  .slogan{
+  }
+  .reset{
+    padding:0;
+    margin:0;
+    color:white;
+  }
