@@ -56,6 +56,25 @@ void loop() {
     }
   }
   //ฝน เนย
-  //IR น้อยหน่า
+  #define LED_PIN_4 D1 //Led Alarm sensor ตรวจจับสิ่งกีดขวาง
+
+int digitalPin = D3; //ประกาศตัวแปร ให้ digitalPin ของ sensor ตรวจจับสิ่งกีดขวาง
+int val3 = 0; //แสดงสถานะของ sensor ตรวจจับสิ่งกีดขวาง
+
+pinMode(LED_PIN_4, OUTPUT); //แสดงค่าทาง Led Alarm sensor ตรวจจับสิ่งกีดขวาง
+pinMode(digitalPin, INPUT); //รับจาก sensor ตรวจจับสิ่งกีดขวาง
+
+val3 = digitalRead(digitalPin); //อ่านค่า Digital จาก sensor infared ตรวจจับสิ่งกีดขวาง
+Serial.print("val_Object = ");
+Serial.println(val3); 
+
+if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง
+    if (val3 == 0){
+      digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง
+      
+    else{
+      digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ
+    }
+  }
   delay(100);
 }
