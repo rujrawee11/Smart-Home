@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background: linear-gradient(#2b1055,#7597de);
+    background: linear-gradient(#2b1055,#7597de,#a3d7f7,#e1a3f7);
 }
 
 header{
@@ -49,7 +49,7 @@ header ul li a:hover{
     background: white;
     color: #2b1055;
 }
-section#abstractt,section#equitment,section#process1,section#member1,section#poster1,
+section#abstractt,section#equitment,section#process1,section#member1,section#poster1,section#vitii,section#codee,section#VDO1,
 section#home{
     position: relative;
     width: 100%;
@@ -100,21 +100,88 @@ section img#moon{
     z-index: 9;
     transform: translateY(130px);
 }
-
-.abstract h2{
+#head1{
     font-size: 2.5em;
+    position: absolute;
+    top: 7%;
+    color: rgb(255, 255, 255);
+}
+#head2{
+    font-size: 2.5em;
+    position: absolute;
+    top: 62%;
     color: white;
 }
 .abstract p{
     font-size: 1em;
-    color: white;
+    color: black;
 }
 
-hr{
+#start{
+  border-radius: 50px;
+  background: #b7d2e7;
+  opacity: 60%;
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  padding: 30px;
+  width: 1000px;
+  height:240px;
+  text-align: center;
+}
+
+#objective{
+    border-radius: 35px;
+    background: #b7d2e7;
+    opacity: 70%;
+    position: absolute;
+    top: 73%;
+    left: 20%;
+    padding: 30px;
+    width: 770px;
+    height:120px;
+  }
+
+.img1{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -500;
+}
+.img2{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 5%;
+    left: 13%
+}
+.img3{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 60%;
+    left: 13%
+}
+/* hr{
     border: 2px dashed white;
     background-color: white;
     border-radius: 1px;
-}
+    top: 10%;
+} */
+#equipment1{
+    border-radius: 35px;
+    color: black;
+    background: #b7d2e7;
+    opacity: 60%;
+    position: absolute;
+    bottom:190%;
+    right: 85%;
+    padding: 20px;
+    width: 200px;
+    height:90px;
+    text-align: center;
+  }
 .equit{
     display:inline;
     margin-top:70%;
@@ -124,12 +191,150 @@ hr{
     width:50%;
     border-radius: 15px;
 }
-.equit:hover{
+.equit1{
+    position: absolute;
+    top: -80%;
+    margin-top:0%;
+    margin-left:54%;
+    margin-bottom:20%;
+    height: 200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li1{
+    position: absolute;
+    top: 52%;
+    margin-top:0%;
+    margin-left: 57%;
+    margin-bottom:20%;
+}
+.equit2{
+    position: absolute;
+    top: -80%;
+    margin-top:0%;
+    margin-left:85%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li2{
+    position: absolute;
+    top: 52%;
+    margin-top:0%;
+    margin-left: 94%;
+    margin-bottom:20%;
+}
+.equit3{
+    position: absolute;
+    top: -80%;
+    margin-top:0%;
+    margin-left:-8%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li3{
+    position: absolute;
+    top: 52%;
+    margin-top:0%;
+    margin-left: -8%;
+    margin-bottom:20%;
+}
+.equit4{
+    position: absolute;
+    top: -80%;
+    margin-top:0%;
+    margin-left:23%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li4{
+    position: absolute;
+    top: 52%;
+    margin-top:0%;
+    margin-left: 23%;
+    margin-bottom:20%;
+}
+.equit5{
+    position: absolute;
+    top: 90%;
+    margin-top:0%;
+    margin-left:-8%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li5{
+    position: absolute;
+    top: 222%;
+    margin-top:0%;
+    margin-left: -6%;
+    margin-bottom:20%;
+}
+.equit6{
+    position: absolute;
+    top: 90%;
+    margin-top:0%;
+    margin-left:23%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li6{
+    position: absolute;
+    top: 222%;
+    margin-top:0%;
+    margin-left: 25%;
+    margin-bottom:20%;
+}
+.equit7{
+    position: absolute;
+    top: 90%;
+    margin-top:0%;
+    margin-left:54%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li7{
+    position: absolute;
+    top: 222%;
+    margin-top:0%;
+    margin-left: 58%;
+    margin-bottom:20%;
+}
+.equit8{
+    position: absolute;
+    top: 90%;
+    margin-top:0%;
+    margin-left:85%;
+    margin-bottom:25%;
+    height:200px;
+    width: 25%;
+    border-radius: 15px;
+}
+#li8{
+    position: absolute;
+    top: 222%;
+    margin-top:0%;
+    margin-left: 90%;
+    margin-bottom:20%;
+    text-align: center;
+}
+
+.equit1:hover{
     border: 1px solid black;
     transform: scale(1.75);
 }
 .equitmentt{
-    position:absolute;
+    position:relative;
 }
 .equitmentt h2{
     font-size: 2.5em;
@@ -140,8 +345,12 @@ hr{
     font-size: 1em;
     color: white;
 }
+.equitmentt h4{
+    font-size: 1em;
+    color: transparent;
+}
 .mid{
-    width: 960px;
+    width: 1000px;
     margin:auto;
 }
 
@@ -155,26 +364,50 @@ hr{
     color: white;
 }
 .process p{
-    font-size: 1em;
+    margin-top: 7%;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}#headp{
+    position: absolute;
+    top: 10%;
     color: white;
-}
+    white-space: nowrap;
+    font-size: 3vw;
+    z-index: 9;
+    transform: translateY(-345px);
+  }
+
 .pic1{
-    display:inline;
-    margin-top:40%;
+    position: absolute;
+    top: -75%;
+    left: 8%;
+    margin-top:0%;
     margin-left:2.5px;
-    margin-bottom:25px;
-    height:100%;
-    width:50%;
+    margin-bottom:100px;
+    height: 250px;
+    width: 400px;
     border-radius:15px;
+    z-index: 10;
+}
+.picbg{
+    transform: translatex(-350px) translatey(-500px) rotate(90deg);
+    opacity: 60%;
+    height: auto;
+    width: 100%;
+    z-index: -20;
 }
 .pic{
-    display:inline;
-    margin-top:40%;
-    margin-left:60%;
-    margin-bottom:25px;
-    height:100%;
-    width:50%;
+
+    position: absolute;
+    top: -75%;
+    margin-top:0%;
+    margin-left:53%;
+    margin-bottom:500px;
+    height: 250px;
+    width: 400px;
     border-radius:15px;
+    z-index: 10;
 }
 
 .member{
@@ -201,6 +434,19 @@ hr{
 .VDO p{
     font-size: 1em;
     color: white;
+}
+#vdi{
+    border-radius: 35px;
+    color: rgb(255, 255, 255);
+    background: #0b2f4b;
+    opacity: 60%;
+    position: absolute;
+    bottom:90%;
+    right: 50%;
+    padding: 20px;
+    width: 200px;
+    height:90px;
+    text-align: center;
 }
 .poster{
     position: absolute;
