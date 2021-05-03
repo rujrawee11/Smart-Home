@@ -14,7 +14,7 @@
         <li><a href="#abstractt">บทคัดย่อ</a></li>
         <li><a href="#equitment">อุปกรณ์</a></li>
         <li><a href="#process1">การทำงาน</a></li>
-        <li><a href="#codee">Source Cod</a></li>
+        <li><a href="#codee">Source Code</a></li>
         <li><a href="#vitii">วิธีใช้</a></li>
         <li><a href="#VDO1">VDO</a></li>
         <li><a href="#poster1">Poster</a></li>
@@ -114,16 +114,16 @@
           <h2 id="source">Source Code</h2>
           <br><br>
           <p id="code2">#include <#TridentTD_LineNotify.h><br>
-            #define LINE_TOKEN  "4NYbYLva4qgaPzYCAhaRhnXI2Pbpu8K6MVqc7qhvXdS"   // บรรทัดที่ 13 ใส่ รหัส TOKEN ที่ได้มาจากข้างบน<br>
+            #define LINE_TOKEN  "ชื่อ Line_Token "   // บรรทัดที่ 13 ใส่ รหัส TOKEN ที่ได้มาจากข้างบน<br>
             
             #include <#TridentTD_LineNotify.h><br>
             #define BLYNK_PRINT Serial<br>
             #include <#ESP8266WiFi.h><br>
             #include <#BlynkSimpleEsp8266.h><br>
             
-            char auth[] = "Ea5ZYzCi3ivGUl8ak6YhHpjwQElQ4jus";   //รหัส Token Blynk<br>
-            char ssid[] = "NAVANITILAW_HOME_2.4GHz"; // 2.4G only ชื่อ Wi-Fi<br>
-            char pass[] = "0813434814"; //รหัสผ่าน<br>
+            char auth[] = "ชื่อ Token_Blynk";   //รหัส Token Blynk<br>
+            char ssid[] = "ชื่อ WIFI"; // 2.4G only ชื่อ Wi-Fi<br>
+            char pass[] = "รหัสผ่าน WIFI"; //รหัสผ่าน<br>
             
             #define LED_PIN_1 D0 //Led เปิด-ปิด แบบปุ่ม(เชื่อม Blynk)<br>
             #define LED_PIN_2 D2 //Led เปิด-ปิด แบบอัตโนมัติ<br>
@@ -193,7 +193,7 @@
                   &emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_3, HIGH); // สั่งให้ LED ติดสว่าง<br>
                 &emsp;&emsp;String LineText;<br>
                 &emsp;&emsp;String string1 = "ฝนตกแล้ว";<br>
-                &emsp;&emsp;String string2 = " เก็บผ้าเร็ว";<br>
+                &emsp;&emsp;String string2 = "!";<br>
                 &emsp;&emsp;LineText = string1 + string2;<br>
                 &emsp;&emsp;Serial.print("Line ");<br>
                 &emsp;&emsp;Serial.println(LineText);<br>
@@ -207,8 +207,8 @@
                 &emsp;&emsp;&emsp;if (val3 == 0){<br>
                   &emsp;&emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, HIGH); // สั่งให้ LED ติดสว่าง<br>
                 &emsp;&emsp;String LineText;<br>
-                &emsp;&emsp;String string1 = "มีคนมา";<br>
-                &emsp;&emsp;String string2 = " ไปดูกัน!";<br>
+                &emsp;&emsp;String string1 = "มีคนแปลกหน้า";<br>
+                &emsp;&emsp;String string2 = "!";<br>
                 &emsp;&emsp;LineText = string1 + string2;<br>
                 &emsp;&emsp;Serial.print("Line ");<br>
                 &emsp;&emsp;Serial.println(LineText);<br>
@@ -229,13 +229,16 @@
 
             <h2>วิธีใช้</h2>
             <br><br>
-            <p>เพราะมีความรักฉันเลยเป็นคนที่อ่อนแอพบกับความพ่ายแพ้ที่วนเวียนซ้ำอย่างทุกข์ทนทุกครั้งยังคอยตอกย้ำเจ็บแล้วไม่จำไม่ใช่คน
-              <br>ถ้าต้องการหลุดจากวังวนต้องไม่ยอมทนอยู่อย่างนี้จะเลิกเอาใจไปรักคนที่ไม่รักเราจะเลิกเอาใจไปทิ้ง
-              <br>ให้เจ็บให้ปวดร้าวเพราะทำดีเท่าไหร่ก็ได้เพียงความว่างเปล่าถ้าหากทุ่มเทให้คนที่ไม่มีหัวใจจะต้องเป็นคนเข้มแข็ง
-              <br>ต่อจากนี้ไปจะเลิกเป็นคนอ่อนไหวให้คนที่ทำร้ายกันแต่คิดจะลืมเท่าไหร่กลับไม่เคยลืมสักวันมันไม่เข้าใจทำไม
-              <br>สุดท้ายก็ยังไปรักเธอเพราะว่าเธอคนนี้ที่มีให้เพียงความผิดหวังเสียน้ำตากี่ครั้งหัวใจก็ยังให้อภัยทุกครั้งมันเป็นคำถาม
-              <br>จากนี้และนานถึงเมื่อไหร่ถ้าไม่ยอมตัดขาดเธอไปต้องเจ็บวนไปอยู่อย่างนี้จะเลิกเอาใจไปรักคนที่ไม่รักเราจะเลิกเอาใจไปทิ้ง
-              <br>ให้เจ็บให้ปวดร้าวเพราะทำดีเท่าไหร่ก็ได้เพียงความว่างเปล่าถ้าหากทุ่มเทให้คนที่ไม่มีหัวใจ…</p>
+            <p>แบบจำลองวงจรภายในบ้านจะมีทั้งหมด 4 ส่วน :
+              <br><span class="text">1.</span> การเปิด-ปิดไฟ
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-สามารถสั่งการได้โดยกดปุ่มเปิด-ปิดหรือสั่งการด้วยเสียงใน Google assistant ด้วยคำว่า "Switch On" เพื่อเปิดไฟ / "Switch Off" เพื่อปิดไฟ
+              <br><span class="text">2.</span> การเปิด-ปิดไฟแบบอัตโนมัติ
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งไว้บริเวณหน้าบ้านเมื่อไม่มีแสงสว่างแล้ว ไฟจะเปิดโดยอัตโนมัติ และเมื่อสว่างไฟก็จะปิดโดยอัตโนมัติ
+              <br><span class="text">3.</span> เครื่องตรวจจับนำ้ฝน
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งไว้ตรงส่วนที่อาจมีผลกระทบจากเหตุการณ์ฝนตก โดยเครื่องสามารถเปิดทิ้งไว้ได้ 24 ชั่วโมง เมื่อเจอฝนก็จะแจ้งเตือนไปยังแอปพลิเคชัน Line
+              <br><span class="text">4.</span>เครื่องตรวจจับบุคคลแปลกหน้า
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งบริเวณรอบบริเวณบ้านหรือรั้ว โดยเครื่องสามารถเปิดทิ้งไว้ได้ 24 ชั่วโมง เมื่อเจอบุคคลแปลกหน้าก็จะแจ้งเตือนไปยังแอปพลิเคชัน Line
+              </p>
             </div>
           </div>
         </section>

@@ -506,8 +506,8 @@ section img#moon{
 .namewrap{
     width:300px;
     margin:2em auto;
-  }
-  .namecard1{
+}
+.namecard1{
     width:100%;
     background:red;
     padding-top:100%;
@@ -519,8 +519,8 @@ section img#moon{
     background-size:cover;
     background-position:center;
     right: 170%;
-  }
-  .namecard2{
+}
+.namecard2{
     width:100%;
     background:red;
     padding-top:100%;
@@ -533,8 +533,8 @@ section img#moon{
     background-position:center;
     right: 55%;
     top: -361px;
-  }
-  .namecard3{
+}
+.namecard3{
     width:100%;
     background:red;
     padding-top:100%;
@@ -542,13 +542,13 @@ section img#moon{
     border-radius:30px;
     box-shadow:0px 5px 15px #0003;
     border:15px solid #f6ed5d;
-    background-image:url(https://i.imgur.com/f0PPnX9.jpg);
+    background-image:url(https://cdn.discordapp.com/attachments/798606239537954816/838665810578767882/S__23339426.jpg);
     background-size:cover;
     background-position:center;
     right: -58%;
     top: -724px;
-  }
-  .namecard4{
+}
+.namecard4{
     width:100%;
     background:red;
     padding-top:100%;
@@ -561,8 +561,8 @@ section img#moon{
     background-position:center;
     left: 170%;
     top: -1085px;
-  }
-  .label{
+}
+.label{
     background:#0005;
     position:absolute;
     bottom:1em;
@@ -573,43 +573,51 @@ section img#moon{
     text-align:center;
     border-radius:10px;
     background:linear-gradient(to right,#fe5487,#a33bf7)
-  }
-  .name{
+}
+.name{
     font-size:1.3em;
-  }
-  .slogan{
-  }
-  .reset{
+}
+.slogan{
+}
+.reset{
     padding:0;
     margin:0;
     color:white;
-  }
-  #code{
-      position: relative;
-  }
-  #code2{
-        position: absolute;
-        width:65vw; 
-        height:95vh; 
-        border:4px solid #5f7c9e; 
-        overflow:auto; 
-        top: 2%;
-        left: 30%;
-        padding: 30px;
-    }
+}
+#code{
+    position: relative;
+}
+#code2{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: #5f7c9e;
+    opacity: 70%;
+    width:65vw; 
+    height:95vh; 
+    border:4px solid #5f7c9e; 
+    overflow:auto; 
+    top: 2%;
+    left: 30%;
+    padding: 30px;
+}
 #source{
-        border-radius: 35px;
-        font-size: 2.5em;
-        margin-bottom: 10px;
-        color: white;
-        color: black;
-        background: #b7d2e7;
-        opacity: 60%;
-        position: absolute;
-        bottom:50%;
-        right: 75%;
-        padding: 20px;
-        width: 300px;
-        height:90px;
-        text-align: center;
-      }
+    border-radius: 35px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: black;
+    background: #b7d2e7;
+    opacity: 60%;
+    position: absolute;
+    bottom:50%;
+    right: 75%;
+    padding: 20px;
+    width: 300px;
+    height:90px;
+    text-align: center;
+}
+.text{
+    background-color: whitesmoke;
+    width:40%;
+    height: 3%;
+    border-radius: 100%;
+}
