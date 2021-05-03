@@ -80,7 +80,7 @@ section img{
 section img#moon{
     mix-blend-mode: screen;
     position: absolute;
-    left: -20%;
+    left: -25%;
 }
 #name{
     position: absolute;
