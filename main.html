@@ -111,16 +111,114 @@
     <section id="codee">
       <div class="mid">
         <div class="code">
-          <hr>
-          <h2>Source Code</h2>
+          <h2 id="source">Source Code</h2>
           <br><br>
-          <p>เพราะมีความรักฉันเลยเป็นคนที่อ่อนแอพบกับความพ่ายแพ้ที่วนเวียนซ้ำอย่างทุกข์ทนทุกครั้งยังคอยตอกย้ำเจ็บแล้วไม่จำไม่ใช่คน
-            <br>ถ้าต้องการหลุดจากวังวนต้องไม่ยอมทนอยู่อย่างนี้จะเลิกเอาใจไปรักคนที่ไม่รักเราจะเลิกเอาใจไปทิ้ง
-            <br>ให้เจ็บให้ปวดร้าวเพราะทำดีเท่าไหร่ก็ได้เพียงความว่างเปล่าถ้าหากทุ่มเทให้คนที่ไม่มีหัวใจจะต้องเป็นคนเข้มแข็ง
-            <br>ต่อจากนี้ไปจะเลิกเป็นคนอ่อนไหวให้คนที่ทำร้ายกันแต่คิดจะลืมเท่าไหร่กลับไม่เคยลืมสักวันมันไม่เข้าใจทำไม
-            <br>สุดท้ายก็ยังไปรักเธอเพราะว่าเธอคนนี้ที่มีให้เพียงความผิดหวังเสียน้ำตากี่ครั้งหัวใจก็ยังให้อภัยทุกครั้งมันเป็นคำถาม
-            <br>จากนี้และนานถึงเมื่อไหร่ถ้าไม่ยอมตัดขาดเธอไปต้องเจ็บวนไปอยู่อย่างนี้จะเลิกเอาใจไปรักคนที่ไม่รักเราจะเลิกเอาใจไปทิ้ง
-            <br>ให้เจ็บให้ปวดร้าวเพราะทำดีเท่าไหร่ก็ได้เพียงความว่างเปล่าถ้าหากทุ่มเทให้คนที่ไม่มีหัวใจ…</p>
+          <p id="code2">#include <#TridentTD_LineNotify.h><br>
+            #define LINE_TOKEN  "4NYbYLva4qgaPzYCAhaRhnXI2Pbpu8K6MVqc7qhvXdS"   // บรรทัดที่ 13 ใส่ รหัส TOKEN ที่ได้มาจากข้างบน<br>
+            
+            #include <#TridentTD_LineNotify.h><br>
+            #define BLYNK_PRINT Serial<br>
+            #include <#ESP8266WiFi.h><br>
+            #include <#BlynkSimpleEsp8266.h><br>
+            
+            char auth[] = "Ea5ZYzCi3ivGUl8ak6YhHpjwQElQ4jus";   //รหัส Token Blynk<br>
+            char ssid[] = "NAVANITILAW_HOME_2.4GHz"; // 2.4G only ชื่อ Wi-Fi<br>
+            char pass[] = "0813434814"; //รหัสผ่าน<br>
+            
+            #define LED_PIN_1 D0 //Led เปิด-ปิด แบบปุ่ม(เชื่อม Blynk)<br>
+            #define LED_PIN_2 D2 //Led เปิด-ปิด แบบอัตโนมัติ<br>
+            #define LED_PIN_3 D4 //Led Alarm sensor ตรวจจับน้ำฝน<br>
+            #define LED_PIN_4 D1 //Led Alarm sensor ตรวจจับสิ่งกีดขวาง<br>
+            #define rainDigital D5 //ขาของ Raindrop<br>
+            
+            int analogPin = A0; //ประกาศตัวแปร ให้ analogPin แทนขา analog ขาที่5 ของ ไฟเปิด-ปิด auto<br>
+            int digitalPin = D3; //ประกาศตัวแปร ให้ digitalPin ของ sensor ตรวจจับสิ่งกีดขวาง<br>
+            int val = 0; //แสดงค่าความสว่างของแสง เปิด-ปิดไฟ auto<br>
+            int val3 = 0; //แสดงสถานะของ sensor ตรวจจับสิ่งกีดขวาง<br>
+            
+            BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม<br>
+            { //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม<br>
+              &emsp;&emsp;if (param.asInt() == 1) {<br>
+                &emsp;&emsp;//เรียกใช้เปิดไฟ LED<br>
+                &emsp;&emsp;&emsp;digitalWrite(LED_PIN_1, HIGH); <br>
+              &emsp;}<br>
+              &emsp;&emsp;else {<br>
+                &emsp;&emsp;//เรียกใช้ปิดไฟ LED<br>
+                &emsp;&emsp;&emsp;digitalWrite(LED_PIN_1, LOW);<br>
+              &emsp;}<br>
+            }<br>
+            <br>
+            void setup() { <br>
+              &emsp;&emsp;Serial.begin(9600);<br>
+              &emsp;&emsp;Serial.println(LINE.getVersion());<br>
+              &emsp;&emsp;WiFi.begin(SSID, PASSWORD);<br>
+              &emsp;&emsp;Serial.printf("WiFi connecting to %s\n",  SSID);<br>
+              &emsp;&emsp;while (WiFi.status() != WL_CONNECTED) {<br>
+                &emsp;&emsp;&emsp;Serial.print(".");<br>
+                &emsp;&emsp;&emsp;delay(400);<br>
+              &emsp;&emsp;}<br>
+              &emsp;&emsp;Serial.printf("\nWiFi connected\nIP : ");<br>
+              &emsp;&emsp;Serial.println(WiFi.localIP());<br>
+            
+              &emsp;&emsp;// กำหนด Line Token<br>
+              &emsp;&emsp;LINE.setToken(LINE_TOKEN);<br>
+              &emsp;&emsp;LINE.notify("myarduino.net");<br>
+              &emsp;&emsp;Blynk.begin(auth, ssid, pass); //Token, ชื่อ Wi-Fi, รหัสผ่าน <br>
+              &emsp;&emsp;pinMode(LED_PIN_1, OUTPUT); //แสดงค่าทาง Led เปิด-ปิด แบบปุ่ม(เชื่อม Blynk)<br>
+              &emsp;&emsp;pinMode(LED_PIN_2, OUTPUT); //แสดงค่าทาง Led เปิด-ปิด แบบอัตโนมัติ<br>
+              &emsp;&emsp;pinMode(LED_PIN_3, OUTPUT); //แสดงค่าทาง Led Alarm sensor ตรวจจับน้ำฝน<br>
+              &emsp;&emsp;pinMode(LED_PIN_4, OUTPUT); //แสดงค่าทาง Led Alarm sensor ตรวจจับสิ่งกีดขวาง<br>
+              &emsp;&emsp;pinMode(digitalPin, INPUT); //รับจาก sensor ตรวจจับสิ่งกีดขวาง<br>
+              &emsp;&emsp;pinMode(rainDigital,INPUT); //รับจาก sensor ตรวจจับน้ำฝน<br>
+            }<br>
+            void loop() {<br>
+              &emsp;&emsp;Blynk.run();<br>
+              &emsp;&emsp;val = analogRead(analogPin); //อ่านค่า Analog จาก LDR sensor วัดความสว่าง <br>
+              &emsp;&emsp;int rainDigitalVal = digitalRead(rainDigital); //อ่านค่า Digital จาก sensor raindrop<br>
+              &emsp;&emsp;val3 = digitalRead(digitalPin); //อ่านค่า Digital จาก sensor infared ตรวจจับสิ่งกีดขวาง<br>
+              &emsp;&emsp;Serial.print("val_LDR = "); //แสดงค่าบรรทัดเดียวกัน<br>
+              &emsp;&emsp;Serial.println(val); // พิมพ์ค่าของตัวแปร val //แสดงค่าขึ้นบรรทัดใหม่<br>
+              &emsp;&emsp;Serial.println(rainDigitalVal);<br>
+              &emsp;&emsp;Serial.print("val_Object = "); <br>
+              &emsp;&emsp;Serial.println(val3); <br>
+              &emsp;&emsp;if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto<br>
+                &emsp;&emsp;&emsp;if (val < 900){<br>
+                  &emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง<br>
+                &emsp;&emsp;&emsp;else{<br>
+                  &emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ<br>
+                &emsp;&emsp;&emsp;}<br>
+              &emsp;}<br>
+              &emsp;&emsp;if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน<br>
+                &emsp;&emsp;&emsp;if (rainDigitalVal == 0){<br>
+                  &emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_3, HIGH); // สั่งให้ LED ติดสว่าง<br>
+                &emsp;&emsp;String LineText;<br>
+                &emsp;&emsp;String string1 = "ฝนตกแล้ว";<br>
+                &emsp;&emsp;String string2 = " เก็บผ้าเร็ว";<br>
+                &emsp;&emsp;LineText = string1 + string2;<br>
+                &emsp;&emsp;Serial.print("Line ");<br>
+                &emsp;&emsp;Serial.println(LineText);<br>
+                &emsp;&emsp;LINE.notify(LineText);}<br>
+                  <br>
+                &emsp;&emsp;&emsp;else{<br>
+                  &emsp;&emsp;&emsp;&emsp;(LED_PIN_3, LOW); // สั่งให้ LED ดับ<br>
+                &emsp;&emsp;}<br>
+              &emsp;}<br>
+              &emsp;&emsp;if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง<br>
+                &emsp;&emsp;&emsp;if (val3 == 0){<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, HIGH); // สั่งให้ LED ติดสว่าง<br>
+                &emsp;&emsp;String LineText;<br>
+                &emsp;&emsp;String string1 = "มีคนมา";<br>
+                &emsp;&emsp;String string2 = " ไปดูกัน!";<br>
+                &emsp;&emsp;LineText = string1 + string2;<br>
+                &emsp;&emsp;Serial.print("Line ");<br>
+                &emsp;&emsp;Serial.println(LineText);<br>
+                &emsp;&emsp;LINE.notify(LineText);}<br>
+                &emsp;&emsp;&emsp;else{<br>
+                  &emsp;&emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ<br>
+                &emsp;&emsp;}<br>
+              &emsp;&emsp;}<br>
+              &emsp;&emsp;delay(100);<br>
+            &emsp;}<br></p>
           </div>
         </div>
       </section>
@@ -171,7 +269,7 @@
                 <div class="namecard1">
                   <div class="label">
                     <h5 class="name reset">
-                      Peerapat Kigprompol
+                      Phiraphat<br>Kitpromphon
                     </h5>
                     <h5 class="slogan reset">
                       63070125
@@ -184,7 +282,7 @@
                 <div class="namecard2">
                   <div class="label">
                     <h5 class="name reset">
-                      Rujchanee khantiwong
+                      Ratchanee<br>khantiwong
                     </h5>
                     <h5 class="slogan reset">
                       63070149
@@ -197,7 +295,7 @@
                 <div class="namecard3">
                   <div class="label">
                     <h5 class="name reset">
-                      Rujrawee Meela
+                      Rujrawee<br>Meela
                     </h5>
                     <h5 class="slogan reset">
                       63070151
@@ -209,7 +307,7 @@
                   <div class="namecard4">
                     <div class="label">
                       <h5 class="name reset">
-                        Aphatsara Moratsathian
+                        Aphatsara<br>Moratsathian
                       </h5>
                       <h5 class="slogan reset">
                         63070188
