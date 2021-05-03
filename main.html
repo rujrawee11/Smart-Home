@@ -229,16 +229,39 @@
 
             <h2 id="vitiii">วิธีใช้</h2>
             <br><br>
-            <p id="txtviti">&nbsp;&nbsp;แบบจำลองวงจรภายในบ้านจะมีทั้งหมด 4 ส่วน :
-              <br><span class="text">1.</span>&nbsp; การเปิด-ปิดไฟ
-              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-สามารถสั่งการได้โดยกดปุ่มเปิด-ปิดหรือสั่งการด้วยเสียงใน Google assistant ด้วยคำว่า "Switch On" เพื่อเปิดไฟ / "Switch Off" เพื่อปิดไฟ
-              <br><span class="text">2.</span>&nbsp; การเปิด-ปิดไฟแบบอัตโนมัติ
-              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งไว้บริเวณหน้าบ้านเมื่อไม่มีแสงสว่างแล้ว ไฟจะเปิดโดยอัตโนมัติ และเมื่อสว่างไฟก็จะปิดโดยอัตโนมัติ
-              <br><span class="text">3.</span>&nbsp; เครื่องตรวจจับนำ้ฝน
-              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งไว้ตรงส่วนที่อาจมีผลกระทบจากเหตุการณ์ฝนตก โดยเครื่องสามารถเปิดทิ้งไว้ได้ 24 ชั่วโมง เมื่อเจอฝนก็จะแจ้งเตือนไปยังแอปพลิเคชัน Line
-              <br><span class="text">4.</span>&nbsp;เครื่องตรวจจับบุคคลแปลกหน้า
-              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-อาจติดตั้งบริเวณรอบบริเวณบ้านหรือรั้ว โดยเครื่องสามารถเปิดทิ้งไว้ได้ 24 ชั่วโมง เมื่อเจอบุคคลแปลกหน้าก็จะแจ้งเตือนไปยังแอปพลิเคชัน Line
-              </p>
+            <p id="txtviti">
+              <span class="text">1.</span>&nbsp; ดาวน์โหลดโปรแกรม Arduino เมื่อเรียบร้อย ให้ติดตั้งแพลตฟอร์ม ESP8266
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เลือกแถบ File -> Preferences
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ไปที่ช่อง Additional Boards Manager URLs: ป้อน URL นี้ http://arduino.esp8266.com/stable/package_esp8266com_index.json
+              แล้ว click OK
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เลือกแถบ Tools -> Board: แล้วเลือกที่ Boards Manager...
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ค้นหา esp8266 by ESP8266 Community จากนั้นกด Install
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เมื่อติดตั้งเสร็จให้เลือก Board : NodeMCU 1.0 (ESP-12E Module)
+              <br><span class="text">2.</span>&nbsp; หลังจากนั้นให้ติดตั้ง Library Blynk ตามข้างบนให้ครบ ดังนี้
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เลือกแถบ Sketch --> Include Library --> Add .ZIP Library...
+              <br><span class="text">3.</span>&nbsp; ดาวน์โหลดแอปพลิเคชัน Blynk ในโทรศัพท์มือถือ
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เมื่อติดตั้งเสร็จให้เข้าแอปพลิเคชัน Blynk แล้วทำการ Log In
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -จากนั้นเลือก New Project และทำการตั้งค่าตามรูปภาพ&nbsp;
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- แล้วกด Create จากนั้นจะได้รับ Auth Token ตาม E-mail ที่ใช้เชื่อมต่อกับแอพลิเคชัน เพื่อนำไปใส่ในโค้ด
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ทำการเพิ่มปุ่มกด Button และตั้งค่า PIN เป็น Digital และตั้งค่าตามภาพ
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เมื่อทำการตั้งค่าเสร็จให้เปิดไฟล์ของเราในโปรแกรม Arduino
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- จากนั้นคลิก Tools แล้วเลือก Port ของสาย และทำการอัปโหลดโค้ดผ่านสาย Micro USB เข้า NodeMCU ของแบบจำลองวงจรภายในบ้าน
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- เมื่ออัปโหลดเสร็จ จะสามารถควบคุมการเปิดปิดไฟได้
+            
+            </p>
+            <img src="https://cdn.discordapp.com/attachments/798606239537954816/838786935777394738/unknown.png" id="detail" style="z-index:100;top:72%;left:20%;height:35%;width:35%;object-fit: scale-down;"><img>
+            <img src="https://www.freepnglogos.com/uploads/arrow/arrow-red-right-transparent-12.png" id="detail"
+              style="z-index:100;top:85%;left:41.25%;height:8%;width:8%;object-fit: scale-down;"><img>
+            <img src="https://imgur.com/w9TSvnb.png" id="detail"
+              style="z-index:80;top:72%;left:35%;height:35%;width:35%;object-fit: scale-down;"><img>
+              <img src="https://www.freepnglogos.com/uploads/arrow/arrow-red-right-transparent-12.png" id="detail"
+                style="z-index:80;top:85%;left:56.25%;height:8%;width:8%;object-fit: scale-down;"><img>
+              <img src="https://imgur.com/zhwqdev.png" id="detail"
+                style="z-index:80;top:72%;left:50%;height:35%;width:35%;object-fit: scale-down;"><img>
+                <img src="https://www.freepnglogos.com/uploads/arrow/arrow-red-right-transparent-12.png" id="detail"
+                  style="z-index:80;top:85%;left:71.25%;height:8%;width:8%;object-fit: scale-down;"><img>
+                <img src="https://imgur.com/Teu3G2V.png" id="detail"
+                  style="z-index:80;top:72%;left:65%;height:35%;width:35%;object-fit: scale-down;"><img>
             </div>
           </div>
         </section>

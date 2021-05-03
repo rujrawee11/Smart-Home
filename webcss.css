@@ -414,7 +414,7 @@ section img#moon{
     background: #0b2f4b;
     opacity: 75%;
     position: absolute;
-    top:25%;
+    top:0%;
     margin-top: 0%;
     left: 8%;
     padding: 2%;
@@ -429,12 +429,12 @@ section img#moon{
     background-color: #6A5ACD;
     opacity: 75%;
     position: absolute;
-    top:40%;
-    margin-top: 0%;
+    top:15%;
+    margin: 0%;
     left: 16%;
-    padding: 1%;
+    padding: 2%;
     width: 80%;
-    height:35%;
+    height:65%;
     text-align: left;
     z-index: 9;
     font-size: 1.1em;
@@ -654,10 +654,11 @@ section img#moon{
 }
 .text{
     background-color: whitesmoke;
-    width:40%;
-    height: 3%;
+    width:10%;
+    height: 10%;
     border-radius: 100%;
     color:black;
+    padding: 0.5%;
 }
   #code{
       position: relative;
