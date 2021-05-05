@@ -407,7 +407,7 @@ section img#moon{
     width: 100%;
     z-index: -20;
 }
-.imghover1 {
+.imghover1{
     position: absolute;
     background-size:cover;
     width: 300px;
@@ -415,7 +415,6 @@ section img#moon{
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491104650952814/image1.jpg'); /* ที่อยู่รูปภาพที่1 */
     top:-65%;
     left:15%;
-
     background-position: center;
     border-radius: 15px;
     cursor: pointer;
