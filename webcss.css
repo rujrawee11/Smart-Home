@@ -141,6 +141,7 @@ section img#moon{
     padding: 30px;
     width: 770px;
     height:120px;
+    z-index: 999;
   }
 
 .img1{
@@ -163,6 +164,14 @@ section img#moon{
     position: absolute;
     top: 60%;
     left: 13%
+}
+.img4{
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 60%;
+    border: 10px double whitesmoke;
+    left: 63%
 }
 /* hr{
     border: 2px dashed white;
