@@ -34,14 +34,14 @@ IoT ต่อไปในอนาคตเป็นอย่างมาก
 - #include <BlynkSimpleEsp8266.h>
 # Source Code
 - เชื่อม Blynk
-char auth[] = "รหัส TOKEN";   //รหัส Token Blynk
+  char auth[] = "รหัส TOKEN";   //รหัส Token Blynk
 
-char ssid[] = "ชื่อ WIFI"; // 2.4G only ชื่อ Wi-Fi
+  char ssid[] = "ชื่อ WIFI"; // 2.4G only ชื่อ Wi-Fi
 
-char pass[] = "Password"; //รหัสผ่าน
+  char pass[] = "Password"; //รหัสผ่าน
 
 - LED เปิด-ปิดไฟโดยใช้แอป
-BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม
+  "BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม
 { 
   //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม
   if (param.asInt() == 1) {
@@ -52,7 +52,7 @@ BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่ง
     //เรียกใช้ปิดไฟ LED
     digitalWrite(LED_PIN_1, LOW);
   }
-}
+}"
 
 - LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop
   if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto
