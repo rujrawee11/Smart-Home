@@ -407,7 +407,6 @@ section img#moon{
     width: 100%;
     z-index: -20;
 }
-/*pic*/
 .imghover1{
     position: absolute;
     background-size:cover;
@@ -766,5 +765,4 @@ section img#moon{
         width: 300px;
         height:90px;
         text-align: center;
-      }
-      pic
+}
