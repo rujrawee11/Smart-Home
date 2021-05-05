@@ -404,14 +404,16 @@ section img#moon{
     width: 400px;
     height:250px;
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491106252521522/image4.jpg'); /* ที่อยู่รูปภาพที่1 */
-    top:20%;
+    top:-75%;
+    left: 60%;
     background-position: center;
     border-radius: 15px;
 }
 .imghover1:hover {
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839492570672267284/image0.png'); /* ที่อยู่รูปภาพที่1 */
-    top:20%;
-    width: 400px;
+    top:-75%;
+    left: 60%;
+        width: 400px;
     background-position : center;
 }
 #vitiii{
