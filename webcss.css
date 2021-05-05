@@ -415,6 +415,7 @@ section img#moon{
     left: 60%;
     width: 400px;
     background-position : center;
+    cursor: pointer;
 }
 #vitiii{
     color: rgb(255, 255, 255);
