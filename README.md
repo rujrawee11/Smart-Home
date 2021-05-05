@@ -29,14 +29,15 @@ IoT ต่อไปในอนาคตเป็นอย่างมาก
 3. เมื่อมีน้ำที่ raindrop จะมีไฟแจ้งเตือนที่ LED ว่าฝนตกแล้วจะส่งแจ้งเตือนไปทางไลน์ว่า ฝนตกแล้ว 	
 4. เมื่อมีสิ่งกีดขวางที่หน้า IR จะทำการแจ้งเตือนที่ LED และส่งแจ้งเตือนไปทางไลน์
 # Library
-#include <TridentTD_LineNotify.h>
-#include <ESP8266WiFi.h>
-
-#include <BlynkSimpleEsp8266.h>
+- #include <TridentTD_LineNotify.h>
+- #include <ESP8266WiFi.h>
+- #include <BlynkSimpleEsp8266.h>
 # Source Code
 - เชื่อม Blynk
 char auth[] = "รหัส TOKEN";   //รหัส Token Blynk
+
 char ssid[] = "ชื่อ WIFI"; // 2.4G only ชื่อ Wi-Fi
+
 char pass[] = "Password"; //รหัสผ่าน
 
 - LED เปิด-ปิดไฟโดยใช้แอป
