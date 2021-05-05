@@ -365,8 +365,8 @@ section img#moon{
     color: white;
 }
 .process p{
-    margin-top: 7%;
-    font-size: 1.1em;
+    margin-top: 13%;
+    font-size: 1em;
     font-weight: bold;
     color: rgb(59, 59, 59);
 }#headp{
@@ -399,14 +399,16 @@ section img#moon{
     z-index: -20;
 }
 .pic{
-
     position: absolute;
+    display: block;
+    background-size: 400px 250px;
     top: -75%;
     margin-top:0%;
     margin-left:53%;
     margin-bottom:500px;
     height: 250px;
     width: 400px;
+    background: url('https://cdn.discordapp.com/attachments/798606239537954816/839491106252521522/image4.jpg') no-repeat ;
     border-radius:15px;
     z-index: 10;
 }
