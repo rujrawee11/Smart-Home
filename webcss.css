@@ -141,6 +141,7 @@ section img#moon{
     padding: 30px;
     width: 770px;
     height:120px;
+    z-index: 999;
   }
 
 .img1{
@@ -163,6 +164,14 @@ section img#moon{
     position: absolute;
     top: 60%;
     left: 13%
+}
+.img4{
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 60%;
+    border: 10px double whitesmoke;
+    left: 63%
 }
 /* hr{
     border: 2px dashed white;
@@ -406,15 +415,18 @@ section img#moon{
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491104650952814/image1.jpg'); /* ที่อยู่รูปภาพที่1 */
     top:-65%;
     left:15%;
+
     background-position: center;
     border-radius: 15px;
     cursor: pointer;
 }
 .imghover1:hover {
+
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839526766535770119/image0.png'); /* ที่อยู่รูปภาพที่1 */
     top:-65%;
     left:15%;
     width: 300px;
+
     background-position : center;
 }
 .imghover2 {
@@ -473,7 +485,6 @@ section img#moon{
     background-position : center;
 }
 #vitiii{
-    border-radius: 35px;
     color: rgb(255, 255, 255);
     background: #0b2f4b;
     opacity: 75%;
