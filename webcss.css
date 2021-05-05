@@ -49,7 +49,7 @@ header ul li a:hover{
     background: white;
     color: #2b1055;
 }
-section#abstractt,section#equitment,section#process1,section#member1,section#poster1,section#vitii,section#codee,section#VDO1,
+section#abstractt,section#equitment,section,section#member1,section#poster1,section#vitii,section#codee,section#VDO1,
 section#home{
     position: relative;
     width: 100%;
@@ -365,10 +365,11 @@ section img#moon{
     color: white;
 }
 .process p{
-    margin-top: 13%;
-    font-size: 1em;
+    margin-top: 6%;
+    font-size: 1.2em;
     font-weight: bold;
-    color: rgb(59, 59, 59);
+    color: rgb(37, 30, 30);
+    
 }#headp{
     position: absolute;
     top: 10%;
@@ -378,7 +379,6 @@ section img#moon{
     z-index: 9;
     transform: translateY(-345px);
   }
-
 .pic1{
     position: absolute;
     top: -75%;
@@ -401,21 +401,76 @@ section img#moon{
 .imghover1 {
     position: absolute;
     background-size:cover;
-    width: 400px;
-    height:250px;
-    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491106252521522/image4.jpg'); /* ที่อยู่รูปภาพที่1 */
-    top:-75%;
-    left: 60%;
+    width: 300px;
+    height:200px;
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491104650952814/image1.jpg'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:15%;
+    background-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.imghover1:hover {
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839526766535770119/image0.png'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:15%;
+    width: 300px;
+    background-position : center;
+}
+.imghover2 {
+    position: absolute;
+    background-size:cover;
+    width: 300px;
+    height:200px;
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491105413136394/image2.jpg'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:-19%;
+    background-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.imghover2:hover {
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839526766535770119/image0.png'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:-19%;
+    width: 300px;
+    background-position : center;
+}
+.imghover3 {
+    position: absolute;
+    background-size:cover;
+    width: 300px;
+    height:200px;
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491105803599893/image3.jpg'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:49%;
     background-position: center;
     border-radius: 15px;
 }
-.imghover1:hover {
-    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839492570672267284/image0.png'); /* ที่อยู่รูปภาพที่1 */
-    top:-75%;
-    left: 60%;
-        width: 400px;
+.imghover3:hover {
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839526765721681980/image0.png'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:49%;
+    width: 300px;
     background-position : center;
-    cursor: pointer;
+}
+.imghover4 {
+    position: absolute;
+    background-size:cover;
+    width: 300px;
+    height:200px;
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491106252521522/image4.jpg'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:83%;
+    background-position: center;
+    border-radius: 15px;
+}
+.imghover4:hover {
+    background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839492570672267284/image0.png'); /* ที่อยู่รูปภาพที่1 */
+    top:-65%;
+    left:83%;
+    width: 300px;
+    background-position : center;
 }
 #vitiii{
     border-radius: 35px;
