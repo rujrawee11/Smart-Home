@@ -401,13 +401,9 @@ section img#moon{
 .imghover1 {
     position: absolute;
     background-size:cover;
-<<<<<<< HEAD
-    width: 300px;
     height:300px;
-=======
     width: 400px;
     height:250px;
->>>>>>> 11870683aae9f8da2c7f68e648463fcc746f2039
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839491106252521522/image4.jpg'); /* ที่อยู่รูปภาพที่1 */
     top:-75%;
     left: 60%;
@@ -415,18 +411,12 @@ section img#moon{
     border-radius: 15px;
 }
 .imghover1:hover {
-<<<<<<< HEAD
-    background-image : url('https://cdn.discordapp.com/attachments/798606239537954816/839492570672267284/image0.png'); /* ที่อยู่รูปภาพที่2 */
-=======
     background-image: url('https://cdn.discordapp.com/attachments/798606239537954816/839492570672267284/image0.png'); /* ที่อยู่รูปภาพที่1 */
-    top:-75%;
     left: 60%;
-        width: 400px;
+    width: 400px;
     background-position : center;
->>>>>>> 11870683aae9f8da2c7f68e648463fcc746f2039
 }
 #vitiii{
-    border-radius: 35px;
     color: rgb(255, 255, 255);
     background: #0b2f4b;
     opacity: 75%;
