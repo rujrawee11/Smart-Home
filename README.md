@@ -42,7 +42,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 
   char pass[] = "Password"; //รหัสผ่าน
 
-- LED เปิด-ปิดไฟโดยใช้แอป
+- LED เปิด-ปิดไฟโดยใช้แอป >>
   "BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม
 { 
   //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม
@@ -56,7 +56,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
   }
 }"
 
-- LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop
+- LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop >>
   if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto
     if (val < 900){
       digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง
@@ -64,7 +64,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
       digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ}
   }
 
-- Raindrop sensor ตรวจจับปริมาณน้ำฝน ถ้าฝนตก LED ติดและมีการแจ้งเตือนไปทางไลน์
+- Raindrop sensor ตรวจจับปริมาณน้ำฝน ถ้าฝนตก LED ติดและมีการแจ้งเตือนไปทางไลน์ >>
   if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน
     if (rainDigitalVal == 0){
       digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง
@@ -73,7 +73,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
       digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}
   }
 
-- IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์
+- IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >>
   if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง
     if (val3 == 0){
       digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง
