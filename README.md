@@ -18,7 +18,6 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 3.	เพื่อให้มีการระวังตัวเองมากขึ้นเมื่อมีสัญญาณเตือนว่ามีคนมาบุกรุก ให้ดูกล้องวงจรปิด หรือไปแอบดูว่าใครมา
 # อุปกรณ์
 1. บอร์ดทดลองวงจร (Photoboard) 
-[1.jpg](https://postimg.cc/qgGzckXt.jpg)
 2. Node MCU V2 ESP8266
 3. LED
 4. ตัวต้านทาง 220 โอห์ม
