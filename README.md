@@ -6,6 +6,9 @@
 (google assistance),ไฟเปิดอัตโนมัติในเวลากลางคืน,ตรวจจับฝน,ตรวจจับผู้บุกรุก โดยจะส่งข้อความเตือนผ่าน line เพื่อแจ้งเหตุ
 การณ์ต่างๆ คณะผู้จัดทำหวังเป็นอย่างยิ่งว่าโครงงานนี้จะสามารถสร้างประโยชน์และเป็นแนวทางในการพัฒนาเทคโนโลยีที่เกี่ยวข้องกับ
 IoT ต่อไปในอนาคตเป็นอย่างมาก
+
+# Poster
+[![Poster][poster]](https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg)
 # YouTube สาธิตการทำงาน
 link: https://www.youtube.com/embed/JpotUoLt1cI
 # จุดประสงค์
