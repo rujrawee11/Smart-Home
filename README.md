@@ -8,8 +8,8 @@
 IoT ต่อไปในอนาคตเป็นอย่างมาก
 
 # Poster
-(https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg)
-# YouTube สาธิตการทำงาน
+[![Poster][poster]](https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg)
+# YouTube สาธิตกา[![Poster][poster]]รทำงาน
 link: https://www.youtube.com/embed/JpotUoLt1cI
 # จุดประสงค์
 1.	เพื่อให้สะดวกต่อการเปิดปิดไฟในบ้านมากขึ้นและช่วยลดค่าใช้จ่าย (ลืมปิดไฟน้อยลง)
@@ -90,3 +90,4 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 3.	ฝึกทักษาการเขียนโปรแกรมด้วยภาษา C และสามารถนำมาประยุกต์ใช้กับการต่อบอร์ด Arduino ได้
 4.	ฝึกการทำงานเป็นกลุ่ม
 
+[poster]:https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg
