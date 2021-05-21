@@ -46,36 +46,36 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 
   char pass[] = "Password"; //รหัสผ่าน
 
-- LED เปิด-ปิดไฟโดยใช้แอป >>
-  "BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม
-{ 
-  //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม
-  if (param.asInt() == 1) {
-    //เรียกใช้เปิดไฟ LED
-    digitalWrite(LED_PIN_1, HIGH); 
-  }
-  else {
-    //เรียกใช้ปิดไฟ LED
-    digitalWrite(LED_PIN_1, LOW);
-  }
-}"
+- LED เปิด-ปิดไฟโดยใช้แอป >><br />
+  "BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม<br />
+{ <br />
+  //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม<br />
+  if (param.asInt() == 1) {<br />
+    //เรียกใช้เปิดไฟ LED<br />
+    digitalWrite(LED_PIN_1, HIGH); <br />
+  }<br />
+  else {<br />
+    //เรียกใช้ปิดไฟ LED<br />
+    digitalWrite(LED_PIN_1, LOW);<br />
+  }<br />
+}"<br />
 
-- LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop >>
-  if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto
-    if (val < 900){
-      digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง
-    else{
-      digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ}
-  }
+- LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop >><br />
+  if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto<br />
+    if (val < 900){<br />
+      digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง<br />
+    else{<br />
+      digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ}<br />
+  }<br />
 
-- Raindrop sensor ตรวจจับปริมาณน้ำฝน ถ้าฝนตก LED ติดและมีการแจ้งเตือนไปทางไลน์ >>
-  if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน
-    if (rainDigitalVal == 0){
-      digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง
-      LINE.notify("ฝนตกแล้ว เก็บผ้าเร็ว!"); //แจ้งเตือนพร้อมมีไฟ LED บอก
-    else{
-      digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}
-  }
+- Raindrop sensor ตรวจจับปริมาณน้ำฝน ถ้าฝนตก LED ติดและมีการแจ้งเตือนไปทางไลน์ >><br />
+  if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน<br />
+    if (rainDigitalVal == 0){<br />
+      digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง<br />
+      LINE.notify("ฝนตกแล้ว เก็บผ้าเร็ว!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
+    else{<br />
+      digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}<br />
+  }<br />
 
 - IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >><br />
   if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง<br />
