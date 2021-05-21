@@ -1,5 +1,5 @@
 # Smart Home
-&emsp;โครงงานนี้เป็นส่วนหนึ่งของวิชา Computer programming จัดทำขึ้นโดยมีวัตถุประสงค์เพื่อนำความรู้ที่ได้รับจากศึกษาการเขียน
+&emsp;&emsp;โครงงานนี้เป็นส่วนหนึ่งของวิชา Computer programming จัดทำขึ้นโดยมีวัตถุประสงค์เพื่อนำความรู้ที่ได้รับจากศึกษาการเขียน
 โปรแกรมภาษา C และต่อบอร์ด Arduino ทั้งในห้องเรียนและจากการศึกษาด้วยตัวเอง ซึ่งในปัจจุบัน IoT หรือ Internet of Things 
 ได้เข้ามามีบทบาทอย่างมากในชีวิตประจำวัน คณะผู้จัดทำจึงได้นำความรู้มาประยุกต์ใช้ให้เข้ากับการดำเนินชีวิตในแต่ละวันเพื่อเพิ่ม
 ความสะดวกสบายให้กับผู้ใช้งานมากขึ้นอาทิ เช่น การเปิด-ปิดไฟ ที่สามารถเปิด-ปิด ผ่านสวิตซ์ (blynk) หรือ การพูดผ่าน
@@ -50,46 +50,53 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
   "BLYNK_WRITE(D0)//เป็นฟังก์ชันในการสั่งการทำงานเมื่อกดปุ่ม D0 ใน Blynk Application ซึ่งในที่นี้คือ การเปิดปิดไฟแบบปุ่ม<br />
 { <br />
   //ค่าที่ได้จาก Widget_Button จะเป็น 0 และ 1 ถ้ามีการปดปุ่ม<br />
-  if (param.asInt() == 1) {<br />
-    //เรียกใช้เปิดไฟ LED<br />
-    digitalWrite(LED_PIN_1, HIGH); <br />
-  }<br />
-  else {<br />
-    //เรียกใช้ปิดไฟ LED<br />
-    digitalWrite(LED_PIN_1, LOW);<br />
-  }<br />
+  &emsp;if (param.asInt() == 1) {<br />
+    &emsp;//เรียกใช้เปิดไฟ LED<br />
+    &emsp;&emsp;digitalWrite(LED_PIN_1, HIGH); <br />
+  &emsp;}<br />
+  &emsp;else {<br />
+    &emsp;//เรียกใช้ปิดไฟ LED<br />
+    &emsp;&emsp;digitalWrite(LED_PIN_1, LOW);<br />
+  &emsp;}<br />
 }"<br />
 
 - LED เปิด-ปิดไฟแบบ Auto ตามคววามเข้มแสง โดยจะอยู่ในเงื่อนไขของ void loop >><br />
-  if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto<br />
-    if (val < 900){<br />
-      digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง<br />
-    else{<br />
-      digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ}<br />
+  &emsp;if (val < 900 or val == 900 or val > 900) { // ค่า 900 สามารถกำหนดปรับได้ตามค่าแสงในห้องต่างๆ การเปิด-ปิดไฟแบบ auto<br />
+    &emsp;&emsp;if (val < 900){<br />
+      &emsp;&emsp;&emsp;digitalWrite(LED_PIN_2, LOW);} // สั่งให้ LED ติดสว่าง<br />
+    &emsp;else{<br />
+      &emsp;&emsp;digitalWrite(LED_PIN_2, HIGH); // สั่งให้ LED ดับ}<br />
   }<br />
 
 - Raindrop sensor ตรวจจับปริมาณน้ำฝน ถ้าฝนตก LED ติดและมีการแจ้งเตือนไปทางไลน์ >><br />
-  if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน<br />
-    if (rainDigitalVal == 0){<br />
-      digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง<br />
-      LINE.notify("ฝนตกแล้ว เก็บผ้าเร็ว!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
-    else{<br />
-      digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}<br />
+  &emsp;if (rainDigitalVal == 0 or rainDigitalVal == 1) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับน้ำฝน<br />
+    &emsp;&emsp;if (rainDigitalVal == 0){<br />
+      &emsp;&emsp;&emsp;digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง<br />
+      &emsp;&emsp;&emsp;LINE.notify("ฝนตกแล้ว เก็บผ้าเร็ว!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
+    &emsp;else{<br />
+      &emsp;&emsp;digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}<br />
   }<br />
 
 - IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >><br />
-  if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง<br />
-    if (val3 == 0){<br />
-      digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง<br />
-      LINE.notify("มีคนมา!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
-    else{<br />
-      digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ}
+  &emsp;if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง<br />
+    &emsp;&emsp;if (val3 == 0){<br />
+      &emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง<br />
+      &emsp;&emsp;&emsp;LINE.notify("มีคนมา!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
+    &emsp;&emsp;else{<br />
+      &emsp;&emsp;digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ}
   }
 # ประโยชน์ที่คาดว่าจะได้รับ
 1.	แบบจำลองการต่อวงจรนี้สามารถนำไปประยุกต์ใช้ได้จริงและมีประโยชน์ต่อผู้ใช้งาน
 2.	แบบจำลองการต่อวงจรนี้สามารถนำไปต่อยอดในอนาคตได้
 3.	ฝึกทักษาการเขียนโปรแกรมด้วยภาษา C และสามารถนำมาประยุกต์ใช้กับการต่อบอร์ด Arduino ได้
 4.	ฝึกการทำงานเป็นกลุ่ม
+# Member
+1.	นายพีรพัฒน์ กิจพร้อมผล 63070125
+2.	นางสาวรัชนี ขันธิวงศ์ 63070149
+3.	นางสาวรุจรวี มีลา 63070151
+4.	นางสาวอาภัสรา โมรัษเฐียร 63070188
+&emsp;&emsp;รายงานนี้ป็นส่วนหนึ่งของวิชา Computer Programming สาขาวิชาเทคโนโลยีสารสนเทศ ภาคเรียนที่ 2 ปีการศึกษา 2563<br />
+คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
 [poster]:https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg
 [all]:https://github.com/rujrawee11/compro/blob/main/image/รวม.jpg
