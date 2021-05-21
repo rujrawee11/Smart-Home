@@ -26,6 +26,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 7. Raindrop sensor วัดปริมาณน้ำฝน
 8. IR infrared obstacle avoidance sensor ตรวจจับวัตถุสิ่งกีดขวาง
 # หลักการทำงาน
+[![รวม][all]](https://github.com/rujrawee11/compro/blob/main/image/รวม.jpg)
 ตามแบบจำลองวงจรภายในบ้าน โดยให้ LED จำลองเป็นหลอดไฟภายในบ้าน 2 หลอดและมีไฟเตือนด้วย 2 หลอด 
 
 1. การเปิด-ปิดไฟ โดยการกดปุ่มในแอปพลิเคชัน Blynk จะต้องไปทำการสร้างปุ่มใน Blynk  และทำการเชื่อมกับ code ก่อนถึง
@@ -91,3 +92,4 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 4.	ฝึกการทำงานเป็นกลุ่ม
 
 [poster]:https://github.com/rujrawee11/compro/blob/main/image/Poster.jpg
+[all]:https://github.com/rujrawee11/compro/blob/main/image/รวม.jpg
