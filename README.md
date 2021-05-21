@@ -73,8 +73,8 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
     &emsp;&emsp;if (rainDigitalVal == 0){<br />
       &emsp;&emsp;&emsp;digitalWrite(LED_PIN_3, HIGH);} // สั่งให้ LED ติดสว่าง<br />
       &emsp;&emsp;&emsp;LINE.notify("ฝนตกแล้ว เก็บผ้าเร็ว!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
-    &emsp;else{<br />
-      &emsp;&emsp;digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}<br />
+    &emsp;&emsp;else{<br />
+      &emsp;&emsp;&emsp;digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}<br />
   }<br />
 
 - IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >><br />
@@ -83,7 +83,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
       &emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง<br />
       &emsp;&emsp;&emsp;LINE.notify("มีคนมา!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
     &emsp;&emsp;else{<br />
-      &emsp;&emsp;digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ}
+      &emsp;&emsp;&emsp;digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ}
   }
 # ประโยชน์ที่คาดว่าจะได้รับ
 1.	แบบจำลองการต่อวงจรนี้สามารถนำไปประยุกต์ใช้ได้จริงและมีประโยชน์ต่อผู้ใช้งาน
@@ -94,7 +94,7 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
 1.	นายพีรพัฒน์ กิจพร้อมผล 63070125
 2.	นางสาวรัชนี ขันธิวงศ์ 63070149
 3.	นางสาวรุจรวี มีลา 63070151
-4.	นางสาวอาภัสรา โมรัษเฐียร 63070188
+4.	นางสาวอาภัสรา โมรัษเฐียร 63070188<br />
 &emsp;&emsp;รายงานนี้ป็นส่วนหนึ่งของวิชา Computer Programming สาขาวิชาเทคโนโลยีสารสนเทศ ภาคเรียนที่ 2 ปีการศึกษา 2563<br />
 คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
