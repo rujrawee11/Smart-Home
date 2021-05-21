@@ -77,12 +77,12 @@ link: https://www.youtube.com/embed/JpotUoLt1cI
       digitalWrite(LED_PIN_3, LOW); // สั่งให้ LED ดับ}
   }
 
-- IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >>
-  if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง
-    if (val3 == 0){
-      digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง
-      LINE.notify("มีคนมา!"); //แจ้งเตือนพร้อมมีไฟ LED บอก
-    else{
+- IR Infared sensor ตรวจจับสิ่งกีดขวาง สัญญาณกันขโมย ถ้ามีคนมาไฟจะติด และส่งแจ้งเตือนไปาทางไลน์ >><br />
+  if (val3 == 0 or val3 != 0) { // สามารถกำหนดปรับค่าได้ตามสถานที่ต่างๆ sensor ตรวจจับสิ่งกีดขวาง<br />
+    if (val3 == 0){<br />
+      digitalWrite(LED_PIN_4, HIGH);} // สั่งให้ LED ติดสว่าง<br />
+      LINE.notify("มีคนมา!"); //แจ้งเตือนพร้อมมีไฟ LED บอก<br />
+    else{<br />
       digitalWrite(LED_PIN_4, LOW); // สั่งให้ LED ดับ}
   }
 # ประโยชน์ที่คาดว่าจะได้รับ
